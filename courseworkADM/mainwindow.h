@@ -15,7 +15,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_create_button_clicked();
+
 private:
     Ui::MainWindow *ui;
+    bool empty_table = true;
+    int count = 0;
+
 };
 #endif // MAINWINDOW_H
