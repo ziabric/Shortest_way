@@ -1,0 +1,11 @@
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Debug/Qt5Cored.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Debug/Qt5Guid.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Debug/Qt5Widgetsd.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Debug/platforms/qdirect2d.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Debug/platforms/qdirect2dd.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Debug/platforms/qminimal.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Debug/platforms/qminimald.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Debug/platforms/qoffscreen.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Debug/platforms/qoffscreend.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Debug/platforms/qwindows.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Debug/platforms/qwindowsd.dll

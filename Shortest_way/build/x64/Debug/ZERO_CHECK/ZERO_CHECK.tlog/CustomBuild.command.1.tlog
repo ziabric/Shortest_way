@@ -1,0 +1,10 @@
+^C:\DOC\4SEM\ADMCW\LUBLU_BUTERI_S_KOLBASOI\SHORTEST_WAY\BUILD\CMAKEFILES\CE5DD04897493DAA98E1BF7817BA1180\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way -BC:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Shortest_way.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
