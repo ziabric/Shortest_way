@@ -34,13 +34,13 @@ add_executable(Shortest_way WIN32 ${PROJECT_SOURCES})
 
 target_link_libraries(Shortest_way PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
-#install(FILES "dependences/win/Qt5Core.dll" DESTINATION ${CMAKE_BINARY_DIR}/Debug)
-#install(FILES "dependences/win/Qt5Gui.dll" DESTINATION ${CMAKE_BINARY_DIR}/Debug)
-#install(FILES "dependences/win/Qt5Widgets.dll" DESTINATION ${CMAKE_BINARY_DIR}/Debug)
-#install(DIRECTORY "dependences/win/platforms" DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+install(FILES "dependences/win/Qt5Core.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
+install(FILES "dependences/win/Qt5Gui.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
+install(FILES "dependences/win/Qt5Widgets.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
+install(DIRECTORY "dependences/win/platforms" DESTINATION ${CMAKE_BINARY_DIR}/Release)
 
-install(FILES "dependences/win/Qt5Cored.dll" DESTINATION ${CMAKE_BINARY_DIR}/Debug)
-install(FILES "dependences/win/Qt5Guid.dll" DESTINATION ${CMAKE_BINARY_DIR}/Debug)
-install(FILES "dependences/win/Qt5Widgetsd.dll" DESTINATION ${CMAKE_BINARY_DIR}/Debug)
-install(DIRECTORY "dependences/win/platforms" DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+install(FILES "dependences/win/Qt5Cored.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
+install(FILES "dependences/win/Qt5Guid.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
+install(FILES "dependences/win/Qt5Widgetsd.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
+install(DIRECTORY "dependences/win/platforms" DESTINATION ${CMAKE_BINARY_DIR}/Release)
 

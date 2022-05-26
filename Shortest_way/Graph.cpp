@@ -1,43 +1,47 @@
 ﻿#include <iostream>
 #include <vector>
+
+#include "ui_mainwindow.h"
+#include "mainwindow.h"
+
 #define inf 100000 // Значение бесконечности
-namespace // Для отделения локальных переменных
-{
-struct Edges 
-{
-    int u,  // Откуда
-        v,  // Куда
-        w;  // Расстояние
-};
 
-const int Vmax = 1000;
-const int Emax = 499;
-int i, j, n, e, start;
-Edges edge[Emax];
-int d[Vmax];
 
-std::vector<int> bellman_ford(int n, int s) 
+
+std::vector<int> MainWindow::bellman_ford(int n, int s, int e)
 {
     using namespace std;
-    int i, j;
+
     vector<int> rt(n); // Возвращаемое значение
 
     // Изначально всё бесконечно.
-    for (i = 0; i < n; ++i)
+    for (int i = 0; i < n; ++i)
         d[i] = inf;
+    ui->logs->append("Func: dellman_ford -- calculating lengths");
 
+    ui->logs->append("Filling the length table with the value 00");
     // Расстояние к себе приравниваем к нулю
     d[s] = 0; 
 
-    // Ищем кратчайшие расстояния
-    for (i = 0; i < n - 1; ++i)
-        for (j = 0; j < e; ++j)
-            if (d[edge[j].v] + edge[j].w < d[edge[j].u])
-                d[edge[j].u] = d[edge[j].v] + edge[j].w;
 
+    // Ищем кратчайшие расстояния
+    ui->logs->append("Calculation of lengths....");
+    for (int i = 0; i < n - 1; ++i)
+        for (int j = 0; j < e; ++j)
+            if (d[edge[j].v] + edge[j].w < d[edge[j].u])
+            {
+                d[edge[j].u] = d[edge[j].v] + edge[j].w;
+                ui->logs->append("ok )");
+            }
+            else
+            {
+                ui->logs->append("fail (");
+            }
+
+    ui->logs->append("Filling in an array of lengths....");
     // Заполняем выходной вектор
     // -1 значит, что пути нет
-    for (i = 0; i < n; ++i)
+    for (int i = 0; i < n; ++i)
         if (d[i] == inf)
             rt[i] = -1;
         else
@@ -46,21 +50,28 @@ std::vector<int> bellman_ford(int n, int s)
 }
 
 // Это функция ввода. Просто надо использовать её.
-std::vector<int> Enter(std::vector<std::vector<int>> matrix, size_t n, size_t start)
+std::vector<int> MainWindow::Enter(std::vector<std::vector<int>> matrix, int n, int start)
 {
+    ui->logs->setText("Start....");
+    ui->logs->append("----------------------");
     // matrix -- матрица
     // n -- количество вершин
     // start -- стартовая позиция
 
-    e = 0; // Счётчик рёбер
+    int e = 0; // Счётчик рёбер
 
     // Заполняем таблицу рёбер
-    for (i = 0; i < n; ++i)
+    ui->logs->append("Fubc: Enter -- Filling an array of edges");
+    ui->logs->append("(The table contains information about the length of each edge)");
+    ui->logs->append("----------------------");
+    for (int i = 0; i < n; ++i)
     {
-        for (j = 0; j < n; ++j)
+        for (int j = 0; j < n; ++j)
         {
             if (matrix[i][j] != 0)
             {
+                QString tmp = QString("Edge" + QString::number(e) + "-" + QString::number(matrix[i][j]));
+                ui->logs->append(tmp);
                 edge[e].v = i;
                 edge[e].u = j;
                 edge[e].w = matrix[i][j];
@@ -69,10 +80,14 @@ std::vector<int> Enter(std::vector<std::vector<int>> matrix, size_t n, size_t st
         }
     }
 
-    // Было start - 1, но я убрал -1, дабы счёт начинался с 0, а не 1. Если будет ошибка -- вернуть.
-    std::vector<int> rt = bellman_ford(n, start);
-    for (int i = 0; i < n; ++i)
-        std::cout << rt[i] << "\n";
+    ui->logs->append("----------------------");
+
+    ui->logs->append("Calling the length calculation function");
+
+    std::vector<int> rt = bellman_ford(n, start-1, e);
+    ui->logs->append("----------------------");
+    ui->logs->append("Response output....");
+
+    ui->logs->append("Finish!");
     return rt;
-}
 }

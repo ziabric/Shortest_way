@@ -4,7 +4,7 @@
 #include <QTableWidgetItem>
 #include <QString>
 
-#include "Graph.cpp"
+//#include "Graph.cpp"
 
 #include <vector>
 
@@ -28,12 +28,18 @@ void MainWindow::on_create_button_clicked()
     ui->table->setRowCount(count);
     ui->table->setColumnCount(count);
 
-
+    for (int i= 0;i<count;i+=1)
+    {
+        ui->table->setRowHeight(i, 40);
+        ui->table->setColumnWidth(i, 40);
+    }
 }
 
 
 void MainWindow::on_get_answer_button_clicked()
 {
+    ui->edit_answer->setText("");
+
     start = ui->edit_start->text().toInt();
 
     std::vector<std::vector<int> > table;
@@ -53,7 +59,7 @@ void MainWindow::on_get_answer_button_clicked()
 
     for (int i = 0;i<count;i+=1)
     {
-        ui->edit_answer->append(QString::number(i+1) + "--" + QString::number(answer[i]));
+        ui->edit_answer->append("Distance to the edge " + QString::number(i+1) + " --  " + QString::number(answer[i]));
     }
 
 
