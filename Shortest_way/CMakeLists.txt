@@ -39,8 +39,8 @@ install(FILES "dependences/win/Qt5Gui.dll" DESTINATION ${CMAKE_BINARY_DIR}/Relea
 install(FILES "dependences/win/Qt5Widgets.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
 install(DIRECTORY "dependences/win/platforms" DESTINATION ${CMAKE_BINARY_DIR}/Release)
 
-install(FILES "dependences/win/Qt5Cored.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
-install(FILES "dependences/win/Qt5Guid.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
-install(FILES "dependences/win/Qt5Widgetsd.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
-install(DIRECTORY "dependences/win/platforms" DESTINATION ${CMAKE_BINARY_DIR}/Release)
+#install(FILES "dependences/win/Qt5Cored.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
+#install(FILES "dependences/win/Qt5Guid.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
+#install(FILES "dependences/win/Qt5Widgetsd.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
+#install(DIRECTORY "dependences/win/platforms" DESTINATION ${CMAKE_BINARY_DIR}/Release)
 

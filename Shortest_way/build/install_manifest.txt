@@ -1,6 +1,6 @@
-C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Release/Qt5Cored.dll
-C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Release/Qt5Guid.dll
-C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Release/Qt5Widgetsd.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Release/Qt5Core.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Release/Qt5Gui.dll
+C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Release/Qt5Widgets.dll
 C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Release/platforms/qdirect2d.dll
 C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Release/platforms/qdirect2dd.dll
 C:/doc/4sem/ADMCW/lublu_buteri_s_kolbasoi/Shortest_way/build/Release/platforms/qminimal.dll
